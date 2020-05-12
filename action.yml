@@ -1,0 +1,16 @@
+# action.yml
+name: 'Hello World'
+description: 'Greet someone and record the time'
+inputs:
+  ENTRY_POINT:  # id of input
+    description: 'Who to greet'
+    required: true
+    default: 'entrypoint.sh'
+outputs:
+  time: # id of output
+    description: 'The time we greeted you'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.ENTRY_POINT }}

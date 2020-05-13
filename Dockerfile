@@ -1,4 +1,4 @@
-FROM opensuse
+FROM opensuse/leap
 
 
 RUN zypper install -y boost_1_58_0-devel libevent-devel sqlite3-devel libthrift-devel hiredis-devel protobuf-devel snappy-devel log4cpp-devel libopenssl-devel cmake make thrift

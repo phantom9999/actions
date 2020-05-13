@@ -2,10 +2,18 @@
 name: 'Hello World'
 description: 'Greet someone and record the time'
 inputs:
-  ENTRY_POINT:  # id of input
-    description: 'Who to greet'
+  shell_main:
+    description: 'main'
     required: true
-    default: 'entrypoint.sh'
+    default: 'action.sh'
+  shell_pre:
+    description: 'pre'
+    required: true
+    default: 'setup.sh'
+  shell_post:
+    description: 'post'
+    required: true
+    default: 'cleanup.sh'
 outputs:
   time: # id of output
     description: 'The time we greeted you'
@@ -13,7 +21,9 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.ENTRY_POINT }}
+    - ${{ inputs.shell_main }}
+    - ${{ inputs.shell_pre }}
+    - ${{ inputs.shell_post }}
   pre-entrypoint: '/setup.sh'
   entrypoint: '/main.sh'
   post-entrypoint: '/cleanup.sh'

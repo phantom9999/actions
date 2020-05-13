@@ -6,9 +6,14 @@ FROM opensuse/leap:15.1
 
 # Copies your code file from your action repository to the filesystem path `/` of the container
 #COPY entrypoint.sh /entrypoint.sh
+# Dockerfile    action.yml    entrypoint.sh setup.sh
+#README.md     cleanup.sh    main.sh
+COPY setup.sh /setup.sh
+COPY main.sh /main.sh
+COPY cleanup.sh /cleanup.sh
 
 # Executes `entrypoint.sh` when the Docker container starts up 
-ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ["/main.sh"]
 
 
 

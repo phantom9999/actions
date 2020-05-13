@@ -14,3 +14,7 @@ runs:
   image: 'Dockerfile'
   args:
     - ${{ inputs.ENTRY_POINT }}
+  pre-entrypoint: '/setup.sh'
+  entrypoint: '/main.sh'
+  post-entrypoint: '/cleanup.sh'
+

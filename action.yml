@@ -12,5 +12,4 @@ outputs:
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  args:
-    - ${{ inputs.ENTRY_POINT }}
+  entrypoint: ${{ inputs.ENTRY_POINT }}

@@ -21,7 +21,7 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ GITHUB_WORKSPACE }}
+    - 'hello'
     - ${{ inputs.shell_main }}
     - ${{ inputs.shell_pre }}
     - ${{ inputs.shell_post }}

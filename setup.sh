@@ -9,7 +9,9 @@ echo ${INPUT_SHELL_MAIN}
 echo ${INPUT_SHELL_PRE}
 echo ${INPUT_SHELL_POST}
 
-cd ${GITHUB_WORKSPACE}
-find .
-sh ${INPUT_SHELL_PRE}
+
+zypper install git nodejs10
+git clone https://github.com/actions/checkout.git && cd checkout && node dist/index.js
+
+
 

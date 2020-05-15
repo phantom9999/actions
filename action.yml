@@ -1,6 +1,6 @@
 # action.yml
-name: 'build in docker'
-description: 'build in docker'
+name: 'centos7'
+description: 'build in centos7'
 inputs:
   shell_main:
     description: 'main'

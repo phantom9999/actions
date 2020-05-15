@@ -1,5 +1,7 @@
 # custom container build action
-run build in custom container, such as fedora, centos, opensuse.
+
+use centos7
+
 
 
 ## Inputs
@@ -27,7 +29,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: use docker build
-      uses: phantom9999/actions@v22
+      uses: phantom9999/actions@centos7_v1
       with:
           shell_main: "action.sh"
 ```

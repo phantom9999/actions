@@ -1,4 +1,4 @@
-FROM centos:7
+FROM centos:8
 
 COPY main.sh /main.sh
 COPY cleanup.sh /cleanup.sh

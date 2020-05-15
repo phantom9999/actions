@@ -1,6 +1,6 @@
 # action.yml
-name: 'centos7'
-description: 'build in centos7'
+name: 'centos8'
+description: 'build in centos8'
 inputs:
   shell_main:
     description: 'main'

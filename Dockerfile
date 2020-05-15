@@ -1,4 +1,4 @@
-FROM opensuse/leap:42.3
+FROM fedora:33
 
 COPY main.sh /main.sh
 COPY cleanup.sh /cleanup.sh

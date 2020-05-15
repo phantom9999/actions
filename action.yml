@@ -1,6 +1,6 @@
 # action.yml
-name: 'build in docker'
-description: 'build in docker'
+name: 'fedora 33'
+description: 'fedora 33'
 inputs:
   shell_main:
     description: 'main'

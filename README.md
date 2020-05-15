@@ -27,7 +27,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: use docker build
-      uses: phantom9999/actions@v22
+      uses: phantom9999/actions@fedora33_v1
       with:
           shell_main: "action.sh"
 ```

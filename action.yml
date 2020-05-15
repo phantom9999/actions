@@ -10,5 +10,6 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   entrypoint: '/main.sh'
+  pre-entrypoint: '/setup.sh'
   post-entrypoint: '/cleanup.sh'
 

@@ -1,5 +1,5 @@
 # action.yml
-name: 'opensuse/leap:42.3'
+name: 'opensuse/leap:15'
 description: ''
 inputs:
   shell_main:

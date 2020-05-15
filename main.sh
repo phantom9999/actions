@@ -9,5 +9,7 @@ echo ${INPUT_SHELL_PRE}
 echo ${INPUT_SHELL_POST}
 
 cd ${GITHUB_WORKSPACE}
-sh ${INPUT_SHELL_MAIN}
+#sh ${INPUT_SHELL_MAIN}
+find .
+
 

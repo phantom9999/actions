@@ -6,13 +6,8 @@ inputs:
     description: 'main'
     required: true
     default: 'action.sh'
-  shell_post:
-    description: 'post'
-    required: true
-    default: 'cleanup.sh'
 runs:
   using: 'docker'
   image: 'Dockerfile'
   entrypoint: '/main.sh'
-  post-entrypoint: '/cleanup.sh'
 

@@ -1,4 +1,5 @@
 #!/bin/sh
+set -x
 
 # `$*` expands the `args` supplied in an `array` individually 
 # or splits `args` in a string separated by whitespace.
@@ -9,7 +10,6 @@ echo ${INPUT_SHELL_PRE}
 echo ${INPUT_SHELL_POST}
 
 cd ${GITHUB_WORKSPACE}
-#sh ${INPUT_SHELL_MAIN}
-find .
+sh ${INPUT_SHELL_MAIN}
 
 

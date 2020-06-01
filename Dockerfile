@@ -3,9 +3,9 @@ RUN dnf install -y boost-devel gperftools-devel snappy-devel openssl-devel gflag
 
 RUN cd /root; \
     wget https://github.com/apache/incubator-brpc/archive/0.9.7.tar.gz; \
-    tar -xzf 0.9.7.tar.gz ; \
-    ls ; \
-    cd incubator-brpc-0.9.7 ;\
+    tar -xzf 0.9.7.tar.gz ;
+
+RUN cd /root/incubator-brpc-0.9.7 ;\
     cmake . ; \
     make -j8; \
     make install

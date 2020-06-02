@@ -13,5 +13,15 @@ RUN cd /root; \
     cd /root ; \
     rm -rf /root/incubator-brpc-0.9.7 /root/0.9.7.tar.gz ;
 
+RUN cd /root; \
+    wget https://github.com/google/fruit/archive/v3.5.0.tar.gz; \
+    tar -xzf v3.5.0.tar.gz; \
+    cd fruit-3.5.0; \
+    cmake . ; \
+    make -j8 ; \
+    make install ; \
+    cd /root; \
+    rm -rf fruit-3.5.0 v3.5.0.tar.gz
+
 
 

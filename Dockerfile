@@ -20,4 +20,3 @@ RUN cd /root && \
     cd /root && \
     rm -rf rocksdb-6.10.1 v6.10.1.tar.gz
 
-

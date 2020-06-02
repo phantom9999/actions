@@ -1,6 +1,6 @@
 FROM fedora:33
 RUN dnf install -y boost-devel gperftools-devel snappy-devel openssl-devel gflags-devel protobuf-devel protobuf-compiler leveldb-devel git cmake gcc-c++ make wget; \
-        dnf clean all \
+        dnf clean all; \
         rm -rf /var/cache/dnf/*
 
 RUN cd /root; \

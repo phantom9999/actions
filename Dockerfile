@@ -1,10 +1,10 @@
-FROM phantom9999/dev_env:brpc_env_brpc_0.9.7
+FROM phantom9999/dev_env:env_brpc_latest
 
 RUN cd /root && \
     wget https://github.com/google/fruit/archive/v3.5.0.tar.gz && \
     tar -xzf v3.5.0.tar.gz && \
     cd fruit-3.5.0 && \
-    cmake . -DCMAKE_BUILD_TYPE=Release && \
+    cmake . -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr && \
     make -j4 && \
     make install && \
     cd /root && \

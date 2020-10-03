@@ -1,4 +1,4 @@
-FROM opensuse/archive:42.1
+FROM opensuse/leap:42.3
 
 RUN zypper search boost
 

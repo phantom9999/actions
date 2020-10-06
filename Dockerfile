@@ -1,8 +1,7 @@
-FROM opensuse/leap:15
+FROM docker.bintray.io/jfrog/artifactory-cpp-ce:latest
+#COPY main.sh /main.sh
+#COPY cleanup.sh /cleanup.sh
+#COPY setup.sh /setup.sh
 
-COPY main.sh /main.sh
-COPY cleanup.sh /cleanup.sh
-COPY setup.sh /setup.sh
-
-ENTRYPOINT ["/main.sh"]
+#ENTRYPOINT ["/main.sh"]
 

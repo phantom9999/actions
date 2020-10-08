@@ -5,7 +5,7 @@ RUN yum install -y epel-release; \
     yum clean all; \
     rm -rf /var/cache/yum/*;
 
-RUN yum install -y cmake3 gcc-c++ make autoconf automake libtool flex byacc \
+RUN yum install -y cmake3 gcc-c++ make autoconf automake libtool flex byacc wget \
     zlib-devel bzip2-devel openssl-devel sqlite-devel snappy-devel libevent-devel \
         yum clean all; \
         rm -rf /var/cache/yum/*;

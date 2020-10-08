@@ -24,7 +24,7 @@ RUN cd /tmp; mkdir build; cd build; \
     tar -xf boost_1_58_0.tar.gz; \
     cd boost_1_58_0; \
     sh bootstrap.sh; \
-    ./b2 variant=release link=static threading=multi runtime-link=shared -j4 install; \
+    ./b2 --without-python variant=release link=static threading=multi runtime-link=shared -j4 install; \
     cd /tmp; rm -rf build;
 
 RUN cd /tmp; mkdir build; cd build; \
@@ -44,9 +44,9 @@ RUN cd /tmp; mkdir build; cd build; \
     cd /tmp; rm -rf build;
 
 RUN cd /tmp; mkdir build; cd build; \
-    wget https://github.com/redis/hiredis/archive/v0.14.1.tar.gz -O hiredis-0.13.3.tar.gz; \
-    tar -xf hiredis-0.13.3.tar.gz; \
-    cd hiredis-0.13.3; \
+    wget https://github.com/redis/hiredis/archive/v0.14.1.tar.gz -O hhiredis-0.14.1.tar.gz; \
+    tar -xf hiredis-0.14.1.tar.gz; \
+    cd hiredis-0.14.1; \
     make -j4 && make install; \
-    rm /usr/local/lib/libhiredis.so.0.13 /usr/local/lib/libhiredis.so; \
+    rm -r /usr/local/lib/libhiredis.so*; \
     cd /tmp; rm -rf build;

@@ -1,5 +1,5 @@
 # action.yml
-name: 'opensuse/leap:15'
+name: 'torrent env'
 description: ''
 inputs:
   shell_main:

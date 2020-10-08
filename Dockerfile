@@ -44,7 +44,7 @@ RUN cd /tmp; mkdir build; cd build; \
     cd /tmp; rm -rf build;
 
 RUN cd /tmp; mkdir build; cd build; \
-    wget https://github.com/redis/hiredis/archive/v0.14.1.tar.gz -O hhiredis-0.14.1.tar.gz; \
+    wget https://github.com/redis/hiredis/archive/v0.14.1.tar.gz -O hiredis-0.14.1.tar.gz; \
     tar -xf hiredis-0.14.1.tar.gz; \
     cd hiredis-0.14.1; \
     make -j4 && make install; \

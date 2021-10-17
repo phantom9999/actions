@@ -1,7 +1,7 @@
 FROM centos:8
 
 # 基本开发环境
-RUN dnf install gcc-c++ cmake make git sudo; \
+RUN dnf install -y gcc-c++ cmake make git sudo; \
     dnf clean all; \
     rm -rf /var/cache/dnf/*
 
@@ -13,8 +13,10 @@ RUN dnf install -y python3 python3-pip python3-pyOpenSSL python3-cryptography \
 
 # 创建用户及目录
 RUN useradd -b /home -m -s /bin/bash work
-USER work
 WORKDIR /home/work
+RUN usermod -a -G wheel work
+RUN echo "work:work"|chpasswd 
+USER work
 
 # 安装projector和conan
 RUN python3 -m pip install -U pip --user; pip3 cache purge;

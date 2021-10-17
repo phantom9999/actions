@@ -25,7 +25,7 @@ RUN .local/bin/projector autoinstall --config-name CLion --ide-name "CLion 2021.
 
 EXPOSE 9999
 
-ENTRYPOINT [ "projector run  CLion" ]
+ENTRYPOINT [ "/home/work/.local/bin/projector", "run", "CLion" ]
 
 #RUN dnf install -y boost-devel gperftools-devel snappy-devel openssl-devel gflags-devel protobuf-devel protobuf-compiler leveldb-devel cmake gcc-c++ make wget; \
 #        dnf clean all; \
